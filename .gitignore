@@ -1,17 +1,17 @@
-# Ignore everything by default
-*
+# Ignore everything at repo root
+/*
 
 # Keep the ignore rules themselves
 !.gitignore
 
-# Allow traversal into firmware so we can re-include a subdirectory
+# Allow firmware tree only
 !firmware/
-firmware/**
+firmware/*
 
-# Allow traversal into freertos_apps
+# Allow freertos_apps inside firmware
 !firmware/freertos_apps/
-firmware/freertos_apps/**
+firmware/freertos_apps/*
 
-# Keep only the apps folder and its contents
+# Track only apps and its contents
 !firmware/freertos_apps/apps/
 !firmware/freertos_apps/apps/**
